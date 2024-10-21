@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <script src="https://unpkg.com/alpinejs" defer></script>
+
+    <style>
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .poppins-extralight {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .poppins-light {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .poppins-medium {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poppins-extrabold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .poppins-black {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .poppins-thin-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .poppins-extralight-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        .poppins-light-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .poppins-regular-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .poppins-medium-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .poppins-semibold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .poppins-bold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .poppins-extrabold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .poppins-black-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+        .roboto-thin {
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .roboto-light {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .roboto-regular {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .roboto-medium {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .roboto-bold {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .roboto-black {
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .roboto-thin-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .roboto-light-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .roboto-regular-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .roboto-medium-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .roboto-bold-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .roboto-black-italic {
+            font-family: "Roboto", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+    </style>
+
+</head>
+
+<body class="bg-indigo-50 roboto-regular">
+    <section class="relative" x-data="{search : false}">
+        <div class="bg-lime-700">
+            <nav class="container flex flex-wrap justify-between mx-auto py-3">
+                <div>
+                    <p class="text-indigo-400 text-2xl font-bold">Sport<span class="text-white">News</span> </p>
+                </div>
+                <div>
+                    <ul class="lg:flex justify-between text-indigo-200 hidden ">
+                        <li
+                            class="py-2 px-4 text-lg font-semibold hover:text-gray-100 transiiton ease-in delay-100 duration-100 hover:bg-lime-500 rounded hover:text-gray-900">
+                            <a href="">Home</a>
+                        </li>
+                        <li
+                            class="py-2 px-4 text-lg font-semibold hover:text-gray-100 transiiton ease-in delay-100 duration-100 hover:bg-lime-500 rounded hover:text-gray-900">
+                            <a href="">Home</a>
+                        </li>
+                        <li
+                            class="py-2 px-4 text-lg font-semibold hover:text-gray-100 transiiton ease-in delay-100 duration-100 hover:bg-lime-500 rounded hover:text-gray-900">
+                            <a href="">Home</a>
+                        </li>
+                        <li
+                            class="py-2 px-4 text-lg font-semibold hover:text-gray-100 transiiton ease-in delay-100 duration-100 hover:bg-lime-500 rounded hover:text-gray-900">
+                            <a href="">Home</a>
+                        </li>
+                        <li
+                            class="py-2 px-4 text-lg font-semibold hover:text-gray-100 transiiton ease-in delay-100 duration-100 hover:bg-lime-500 rounded hover:text-gray-900">
+                            <a href="">Home</a>
+                        </li>
+                        <li
+                            class="py-2 px-4 text-lg font-semibold hover:text-gray-100 transiiton ease-in delay-100 duration-100 hover:bg-lime-500 rounded hover:text-gray-900">
+                            <a href="">Home</a>
+                        </li>
+                        <li class="py-2 px-4 text-lg font-semibold">
+                            <a href=""> <i class="fa-solid fa-magnifying-glass"></i> </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </nav>
+        </div>
+
+        <div class="text-end mt-2 container" x-show="search">
+            <div class="input-group relative">
+                <input type="text" class="border py-1 px-3 border-lime-500 focus-none outline-none bg-white">
+
+                <button class="absolute right-0 top-0 h-full px-3 py-1  bg-lime-500"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- main content -->
+
+    <section>
+        <div class="container py-3 mx-auto lg:grid lg:grid-cols-2 gap-4">
+            <div class="bg-white rounded mb-4 mx-2">
+                <div class="w-full h-96 relative">
+                    <img src="image/news-1.jpg" class="w-full h-full rounded" alt="">
+                    <div class="absolute bottom-0 left-0 text-white bg-gradient-to-t px-4 w-full py-8 from-gray-800">
+                        <p class="text-2xl font-bold truncate mb-2">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="text-base font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                            similique
+                            cupiditate rerum
+                            recusandae laudantium magnam aperiam obcaecati voluptates repellat nesciunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:grid md:grid-cols-2 mx-2 mb-4 gap-4">
+                <div class=" w-full h-96 relative mb-4">
+                    <img src="image/news-1.jpg" class="w-full h-full rounded" alt="">
+                    <div class="absolute bottom-0 left-0 text-white bg-gradient-to-t px-4 w-full py-8 from-gray-800">
+                        <p class="text-2xl font-bold truncate mb-2">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="text-base font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                            similique
+                            cupiditate rerum.</p>
+                    </div>
+                </div>
+                <div class="w-full h-96 relative">
+                    <img src="image/news-1.jpg" class="w-full h-full rounded" alt="">
+                    <div class="absolute bottom-0 left-0 text-white bg-gradient-to-t px-4 w-full py-8 from-gray-800">
+                        <p class="text-2xl font-bold truncate mb-2">
+                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet.
+                        </p>
+                        <p class="text-base font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+                            similique
+                            cupiditate rerum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="container mx-auto mt-8">
+        <h2 class="text-3xl mx-2 md:mx-0 font-semibold  border-l-4 px-2 border-lime-500">Politics</h2>
+        <div class="lg:flex  py-5 gap-4">
+            <div class="lg:w-3/4  md:grid gap-4 mx-2 md:grid-cols-2 grid-cols-3">
+                <div class="shadow-md pb-2 mb-6  lg:mb-0 shadow-gray-500 rounded-md">
+                    <img src="image/images10.jpeg" class="w-full sm:h-48 lg:h-48 rounded" alt="">
+                    <h2 class="text-xl font-bold px-3 py-2 text-gray-700 truncate">Lorem ipsum dolor, sit amet
+                        consectetur
+                        adipisicing elit.
+                    </h2>
+                    <p class="px-3 text-base text-gray-800 font-base">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Aspernatur tenetur aperiam quia
+                    </p>
+                    <a href=""
+                        class="text-sm  px-3 my-3 text-gray-700 hover:text-lime-700 transition duration-100 delay-100">see
+                        more... </a>
+                </div>
+                <div class="shadow-md shadow-gray-500 mb-6 lg:mb-0 pb-2 rounded-md">
+                    <img src="image/images10.jpeg" class="w-full h-48 rounded" alt="">
+                    <h2 class="text-xl font-bold px-3 py-2 text-gray-700 truncate">Lorem ipsum dolor, sit amet
+                        consectetur
+                        adipisicing elit.
+                    </h2>
+                    <p class="px-3 text-base text-gray-800 font-base">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Aspernatur tenetur aperiam quia
+                    </p>
+                    <a href=""
+                        class="text-sm font-bold px-3 mb-4 text-gray-700 hover:text-lime-700 transition duration-100 delay-100">see
+                        more </a>
+                </div>
+                <div class="shadow-md pb-2 shadow-gray-500 mb-6 lg:mb-0 rounded-md">
+                    <img src="image/images10.jpeg" class="w-full h-48 rounded" alt="">
+                    <h2 class="text-xl font-bold px-3 py-2 text-gray-700 truncate">Lorem ipsum dolor, sit amet
+                        consectetur
+                        adipisicing elit.
+                    </h2>
+                    <p class="px-3 text-base text-gray-800 font-base">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Aspernatur tenetur aperiam quia
+                    </p>
+                    <a href=""
+                        class="text-sm font-bold px-3 my-3 text-gray-700 hover:text-lime-700 transition duration-100 delay-100">see
+                        more </a>
+                </div>
+                <div class="shadow-md shadow-gray-500 pb-2 mb-6 lg:mb-0 rounded-md">
+                    <img src="image/images10.jpeg" class="w-full h-48 rounded" alt="">
+                    <h2 class="text-xl font-bold px-3 py-2 text-gray-700 truncate">Lorem ipsum dolor, sit amet
+                        consectetur
+                        adipisicing elit.
+                    </h2>
+                    <p class="px-3 text-base text-gray-800 font-base">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Aspernatur tenetur aperiam quia
+                    </p>
+                    <a href=""
+                        class="text-sm font-bold px-3 mb-4 text-gray-700 hover:text-lime-700 transition duration-100 delay-100">see
+                        more </a>
+                </div>
+                <div class="shadow-md pb-2 shadow-gray-500 mb-6 lg:mb-0 rounded-md">
+                    <img src="image/images10.jpeg" class="w-full h-48 rounded" alt="">
+                    <h2 class="text-xl font-bold px-3 py-2 text-gray-700 truncate">Lorem ipsum dolor, sit amet
+                        consectetur
+                        adipisicing elit.
+                    </h2>
+                    <p class="px-3 text-base text-gray-800 font-base">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Aspernatur tenetur aperiam quia
+                    </p>
+                    <a href=""
+                        class="text-sm font-bold px-3 my-3 text-gray-700 hover:text-lime-700 transition duration-100 delay-100">see
+                        more </a>
+                </div>
+                <div class="shadow-md shadow-gray-500 mb-6 rounded-md">
+                    <img src="image/images10.jpeg" class="w-full h-48 rounded" alt="">
+                    <h2 class="text-xl font-bold px-3 py-2 text-gray-700 truncate">Lorem ipsum dolor, sit amet
+                        consectetur
+                        adipisicing elit.
+                    </h2>
+                    <p class="px-3 text-base text-gray-800 font-base">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit.
+                        Aspernatur tenetur aperiam quia
+                    </p>
+                    <a href=""
+                        class="text-sm font-bold px-3 text-gray-700 hover:text-lime-700 transition duration-100 delay-100">see
+                        more </a>
+                </div>
+            </div>
+            <div class="lg:w-1/4 mx-2 pt-4">
+                <h1 class="text-2xl font-semibold mb-8 border-l-4 border-lime-500 pl-2">Most Popular News</h1>
+                <div class=" md:grid  md:grid-cols-2 lg:grid-cols-1 gap-4">
+                    <div class="flex gap-3 shadow-md shadow-gray-500">
+                        <div class="w-2/6">
+                            <img src="image/images10.jpeg" class="rounded" alt="">
+                        </div>
+                        <div class=" w-4/6 py-2">
+                            <h1 class="roboto-bold truncate">Lorem ipsum dolor sit amet amet.</h1>
+                            <p class="roboto-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3 shadow-md shadow-gray-500">
+                        <div class="w-2/6">
+                            <img src="image/images10.jpeg" class="rounded" alt="">
+                        </div>
+                        <div class=" w-4/6 py-2">
+                            <h1 class="roboto-bold truncate">Lorem ipsum dolor sit amet amet.</h1>
+                            <p class="roboto-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div>
+                    <div class="flex gap-3 shadow-md shadow-gray-500">
+                        <div class="w-2/6">
+                            <img src="image/images10.jpeg" class="rounded" alt="">
+                        </div>
+                        <div class=" w-4/6 py-2">
+                            <h1 class="roboto-bold truncate">Lorem ipsum dolor sit amet amet.</h1>
+                            <p class="roboto-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-3 shadow-md shadow-gray-500">
+                        <div class="w-2/6">
+                            <img src="image/images10.jpeg" class="rounded" alt="">
+                        </div>
+                        <div class=" w-4/6 py-2">
+                            <h1 class="roboto-bold truncate">Lorem ipsum dolor sit amet amet.</h1>
+                            <p class="roboto-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div>
+
+
+                    <div class="flex gap-3 shadow-md shadow-gray-500">
+                        <div class="w-2/6">
+                            <img src="image/images10.jpeg" class="rounded" alt="">
+                        </div>
+                        <div class=" w-4/6 py-2">
+                            <h1 class="roboto-bold truncate">Lorem ipsum dolor sit amet amet.</h1>
+                            <p class="roboto-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+
+</html>
